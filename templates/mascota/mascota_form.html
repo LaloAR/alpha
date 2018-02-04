@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+<form method="post">
+	<!-- Token de seguridad que nos provee Django -->
+	{% csrf_token %}
+	<!-- as_p indica que se va a pintar como párrafo -->
+	{{ form.as_p }}
+
+	<button type="submit">Registrar</button>
+</form>
+{% endblock %}
